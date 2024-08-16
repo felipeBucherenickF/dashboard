@@ -1,0 +1,125 @@
+:root {
+  --background-color: #b5c0d0;
+  --font-color: #021526;
+  --primary-color: #51829b;
+  --secondary-color: #f6995c;
+  --white: #f7f7f7;
+  --main-font: "Ubuntu", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* NAVBAR ====================================================================== */
+
+.navbar {
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    font-size: 2.8rem;
+  }
+  ul {
+    margin-bottom: 4rem;
+    list-style: none;
+  }
+  li {
+    padding: 1rem;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+
+/* HEADER ====================================================================== */
+
+.header {
+  padding: 2rem 4rem;
+  background-color: var(--white);
+}
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    input {
+      width: 40rem;
+      height: 2.4rem;
+      padding: 1rem;
+      border: none;
+      outline: none;
+      border-radius: 2rem;
+      background-color: var(--background-color);
+      color: var(--white);
+      font-weight: bold;
+    }
+  }
+  .user-information {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    span {
+      color: var(--font-color);
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.header__user-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .user-name {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    span {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+  }
+  .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 2rem;
+      background-color: var(--primary-color);
+      color: var(--white);
+      font-weight: bold;
+    }
+  }
+}
