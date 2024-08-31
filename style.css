@@ -22,9 +22,17 @@ a {
   text-decoration: none;
 }
 
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
 /* NAVBAR ====================================================================== */
 
 .navbar {
+  grid-column: 1/2;
+  grid-row: 1/6;
   padding: 2rem;
   background-color: var(--primary-color);
   color: var(--white);
@@ -55,6 +63,8 @@ a {
 /* HEADER ====================================================================== */
 
 .header {
+  grid-column: 2/6;
+  grid-row: 1/2;
   padding: 2rem 4rem;
   background-color: var(--white);
 }
@@ -120,6 +130,112 @@ a {
       background-color: var(--primary-color);
       color: var(--white);
       font-weight: bold;
+    }
+  }
+}
+
+/* MAIN ====================================================================== */
+.main {
+  grid-column: 2/6;
+  grid-row: 2/6;
+  display: flex;
+}
+/* Projects --------------------------------------------- */
+.projects-container {
+  flex-basis: 70%;
+  padding: 2rem;
+  background-color: var(--background-color);
+  .projects-title {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  .project {
+    position: relative;
+    padding: 2rem;
+    border-left: 10px solid var(--secondary-color);
+    background-color: var(--white);
+    border-radius: 0.7rem;
+    .project__title {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .project__content {
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      color: rgb(105, 105, 105);
+    }
+    .project__options {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+/* Announcements and Trending --------------------------------------------- */
+.announcements-trending {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--background-color);
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .announcements {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.7rem;
+    p {
+      margin-top: 0.4rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgb(147, 147, 147);
+      color: rgb(105, 105, 105);
+    }
+    .announcement:last-child {
+      p {
+        margin-bottom: 0;
+        border: none;
+      }
+    }
+  }
+
+  .trendings {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 0.7rem;
+    .trending {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      span {
+        font-weight: bold;
+      }
+      p {
+        margin-top: 0.4rem;
+        color: rgb(105, 105, 105);
+      }
     }
   }
 }
